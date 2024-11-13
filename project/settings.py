@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 from dotenv import load_dotenv
 from os import getenv
 
@@ -118,6 +119,10 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = 'users.User'
+
+SIMPLE_JWT = { 
+	'ACCESS_TOKEN_LIFETIME': timedelta(hours=12)
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
