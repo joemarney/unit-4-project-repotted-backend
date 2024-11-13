@@ -14,3 +14,11 @@ class ListCreateRoomView(APIView):
         rooms = Room.objects.all()
         serializer = RoomSerializer(rooms, many=True)
         return Response(serializer.data)
+    
+    @catch_exceptions
+    def post(self, request):
+        request.data['owner'] = request.user.id
+        room = RoomSerializer(data=request.data)
+        room.is_valid(raise_exception=True)
+        room.save()
+        return Response(room.data, status.HTTP_201_CREATED)
