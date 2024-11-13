@@ -39,3 +39,10 @@ class RetrieveUpdateDestroyRoomView(APIView):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data)
+    
+    @catch_exceptions
+    def delete(self, request, pk):
+        room = Room.objects.get(pk=pk)
+        self.check_object_permissions(request, room)
+        room.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)

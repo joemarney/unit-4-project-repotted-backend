@@ -10,6 +10,9 @@ def catch_exceptions(func):
     def wrapper(*args, **kwargs):
         try:
             return func(*args, **kwargs)
+        except PermissionDenied as e:
+            print(e)
+            return Response(str(e), status.HTTP_403_FORBIDDEN)
         except (Room.DoesNotExist, NotFound) as e:
             print(e)
             return Response(str(e), status.HTTP_404_NOT_FOUND)
