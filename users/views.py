@@ -33,10 +33,13 @@ class SignInView(APIView):
 
         if hashers.check_password(password, user.password):
             token_pair = RefreshToken.for_user(user)
+            access_token = token_pair.access_token
+            access_token['username'] = user.username
+            access_token['avatar'] = user.avatar
             serialized_user = UserSerializer(user)
             return Response({ 
                 'user': serialized_user.data,
-                'token': str(token_pair.access_token)
+                'token': str(access_token)
             })
     
         return Response({ 'detail': 'Unauthorized' }, status.HTTP_401_UNAUTHORIZED)
