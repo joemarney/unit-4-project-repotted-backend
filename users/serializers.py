@@ -8,8 +8,8 @@ class UserSerializer(serializers.ModelSerializer):
     password_confirmation = serializers.CharField(write_only=True)
 
     def validate(self, data):
-        password = data.pop('password')
-        password_confirmation = data.pop('password_confirmation')
+        password = (data.pop('password'))
+        password_confirmation = (data.pop('password_confirmation'))
         if password != password_confirmation:
             raise serializers.ValidationError('Passwords do not match')
         # password_validation.validate_password(password)

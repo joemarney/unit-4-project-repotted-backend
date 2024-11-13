@@ -7,7 +7,7 @@ User = get_user_model()
 def catch_exceptions(func):
     def wrapper(*args, **kwargs):
         try:
-            func(*args, **kwargs)
+            return func(*args, **kwargs)
         except User.DoesNotExist as e:
             print(e)
             return Response('One or more credentials incorrect', status.HTTP_403_FORBIDDEN)
