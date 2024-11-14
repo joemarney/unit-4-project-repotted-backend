@@ -27,15 +27,13 @@ class SignInView(APIView):
 
     @catch_exceptions
     def post(self, request):
-        username_or_email = request.data['username_or_email']
+        u_or_e = request.data['username_or_email']
         password = request.data.get('password')
-        user = User.objects.get(Q(username=username_or_email) | Q(email=username_or_email))
+        user = User.objects.get(Q(username=u_or_e) | Q(email=u_or_e))
 
         if hashers.check_password(password, user.password):
             token_pair = RefreshToken.for_user(user)
             access_token = token_pair.access_token
-            access_token['username'] = user.username
-            access_token['avatar'] = user.avatar
             serialized_user = UserSerializer(user)
             return Response({ 
                 'user': serialized_user.data,

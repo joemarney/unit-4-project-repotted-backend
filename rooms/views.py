@@ -3,6 +3,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from utilities.exceptions import catch_exceptions
 from .serializers import RoomSerializer, PopulatedRoomSerializer
+from utilities.permissions import IsOwnerOrReadOnly
 
 from .models import Room
 
@@ -24,6 +25,7 @@ class ListCreateRoomView(APIView):
         return Response(room.data, status.HTTP_201_CREATED)
     
 class RetrieveUpdateDestroyRoomView(APIView):
+    permission_classes = [IsOwnerOrReadOnly]
 
     @catch_exceptions
     def get(self, request, pk):
