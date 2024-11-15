@@ -1,12 +1,11 @@
 [
-{
-  "model": "rooms.room",
-  "pk": 2,
-  "fields": {
-    "name": "Kitchen",
-    "direction_facing": "East",
-    "dependents": "Cat",
-    "owner": 2
+  {
+    "model": "rooms.room",
+    "pk": 2,
+    "fields": {
+      "name": "Kitchen",
+      "direction_facing": "East",
+      "owner": 2
+    }
   }
-}
 ]
