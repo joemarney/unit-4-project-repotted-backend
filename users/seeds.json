@@ -1,0 +1,40 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$ard0YEH45XxGGNdm2o0mEv$ysGyNhBXd7+UYx/OV6sYNdsZqg6kID95dDNrOoymfgY=",
+      "last_login": "2024-11-13T12:07:44.983Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "admin",
+      "last_name": "user",
+      "email": "admin@email.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-11-13T12:07:15.186Z",
+      "avatar": "https://placehold.co/60x60",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$EqELAp4S3dmHipFG8JxKNB$3E+jrU29odZ2R//DW5J3LcoFLRCGeGL+8F1tI9iXUuI=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "plantlover35",
+      "first_name": "joe",
+      "last_name": "m",
+      "email": "example@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-13T14:28:50.554Z",
+      "avatar": "https://placehold.co/60x60",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

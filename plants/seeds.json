@@ -1,0 +1,422 @@
+[
+  {
+    "model": "plants.plant",
+    "pk": 1,
+    "fields": {
+      "name": "spider plant",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670598/spiderplant_v0itjg.jpg",
+      "scientific_name": "chlorophytum comosum",
+      "description": "A resilient, air-purifying plant with green and white variegated leaves.",
+      "sunlight": "moderate",
+      "watering": "moderate",
+      "toxicity": "none",
+      "difficulty": "low"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 2,
+    "fields": {
+      "name": "alocasia",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670585/alocasia_fxv31m.jpg",
+      "scientific_name": "alocasia",
+      "description": "A striking tropical plant with large, arrow-shaped leaves.",
+      "sunlight": "moderate",
+      "watering": "moderate",
+      "toxicity": "high",
+      "difficulty": "moderate"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 3,
+    "fields": {
+      "name": "peace lily",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670593/peacelily_fhs1in.avif",
+      "scientific_name": "spathiphyllum",
+      "description": "Known for its elegant white spathes and ability to thrive in low light.",
+      "sunlight": "low",
+      "watering": "moderate",
+      "toxicity": "moderate",
+      "difficulty": "low"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 4,
+    "fields": {
+      "name": "snake plant",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670595/snakeplant_xcltjb.jpg",
+      "scientific_name": "sansevieria trifasciata",
+      "description": "An air-purifying plant with upright, sword-like leaves.",
+      "sunlight": "low",
+      "watering": "low",
+      "toxicity": "low",
+      "difficulty": "low"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 5,
+    "fields": {
+      "name": "jade plant",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670590/jadeplant_acxsoi.webp",
+      "scientific_name": "crassula ovata",
+      "description": "A popular succulent with thick, glossy leaves.",
+      "sunlight": "moderate",
+      "watering": "low",
+      "toxicity": "moderate",
+      "difficulty": "low"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 6,
+    "fields": {
+      "name": "pothos",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670595/pothos_imvfu9.webp",
+      "scientific_name": "epipremnum aureum",
+      "description": "A trailing vine with heart-shaped green or variegated leaves.",
+      "sunlight": "moderate",
+      "watering": "low",
+      "toxicity": "high",
+      "difficulty": "low"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 7,
+    "fields": {
+      "name": "rubber tree",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670596/rubbertree_ff9x1x.jpg",
+      "scientific_name": "ficus elastica",
+      "description": "A tropical plant with thick, glossy leaves.",
+      "sunlight": "moderate",
+      "watering": "moderate",
+      "toxicity": "moderate",
+      "difficulty": "moderate"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 8,
+    "fields": {
+      "name": "monstera",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670591/monstera_tenwzh.jpg",
+      "scientific_name": "monstera deliciosa",
+      "description": "A dramatic plant with split leaves and a climbing habit.",
+      "sunlight": "moderate",
+      "watering": "moderate",
+      "toxicity": "moderate",
+      "difficulty": "moderate"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 9,
+    "fields": {
+      "name": "zz plant",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670598/zzplant_wqbpwc.avif",
+      "scientific_name": "zamioculcas zamiifolia",
+      "description": "A hardy plant with thick, waxy leaves.",
+      "sunlight": "low",
+      "watering": "low",
+      "toxicity": "low",
+      "difficulty": "low"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 10,
+    "fields": {
+      "name": "aloe vera",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670585/aloevera_gmjebf.jpg",
+      "scientific_name": "aloe barbadensis miller",
+      "description": "A succulent known for its medicinal properties and spiky leaves.",
+      "sunlight": "moderate",
+      "watering": "low",
+      "toxicity": "low",
+      "difficulty": "low"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 11,
+    "fields": {
+      "name": "calathea",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670586/calathea_gmdogd.webp",
+      "scientific_name": "calathea spp.",
+      "description": "An ornamental plant with striking variegated leaves.",
+      "sunlight": "low",
+      "watering": "moderate",
+      "toxicity": "low",
+      "difficulty": "moderate"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 12,
+    "fields": {
+      "name": "english ivy",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670590/englishivy_kce0fb.jpg",
+      "scientific_name": "hedera helix",
+      "description": "A vining plant with attractive, triangular leaves.",
+      "sunlight": "moderate",
+      "watering": "low",
+      "toxicity": "moderate",
+      "difficulty": "moderate"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 13,
+    "fields": {
+      "name": "african violet",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670585/africanviolet_cbtfz2.jpg",
+      "scientific_name": "saintpaulia ionantha",
+      "description": "A flowering plant with delicate blooms.",
+      "sunlight": "low",
+      "watering": "moderate",
+      "toxicity": "none",
+      "difficulty": "low"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 14,
+    "fields": {
+      "name": "heartleaf philodendron",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670593/heartleafphilodendron_cqnmgz.jpg",
+      "scientific_name": "philodendron hederaceum",
+      "description": "A vining plant with heart-shaped leaves.",
+      "sunlight": "low",
+      "watering": "low",
+      "toxicity": "moderate",
+      "difficulty": "low"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 15,
+    "fields": {
+      "name": "string of pearls",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670596/stringofpearls_rvjtip.jpg",
+      "scientific_name": "senecio rowleyanus",
+      "description": "A trailing succulent with bead-like leaves.",
+      "sunlight": "moderate",
+      "watering": "low",
+      "toxicity": "high",
+      "difficulty": "moderate"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 16,
+    "fields": {
+      "name": "moth orchid",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670593/mothorchid_u2rrcs.jpg",
+      "scientific_name": "phalaenopsis spp.",
+      "description": "A popular orchid with vibrant, long-lasting flowers.",
+      "sunlight": "moderate",
+      "watering": "moderate",
+      "toxicity": "none",
+      "difficulty": "moderate"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 17,
+    "fields": {
+      "name": "wax plant",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670598/waxplant_zncey4.webp",
+      "scientific_name": "hoya carnosa",
+      "description": "A fragrant flowering plant with waxy leaves.",
+      "sunlight": "moderate",
+      "watering": "low",
+      "toxicity": "none",
+      "difficulty": "moderate"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 18,
+    "fields": {
+      "name": "parlor palm",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670592/parlorpalm_gs6ppm.jpg",
+      "scientific_name": "chamaedorea elegans",
+      "description": "A compact and graceful palm, perfect for indoors.",
+      "sunlight": "low",
+      "watering": "moderate",
+      "toxicity": "none",
+      "difficulty": "low"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 19,
+    "fields": {
+      "name": "croton",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670591/croton_moa26t.jpg",
+      "scientific_name": "codiaeum variegatum",
+      "description": "A vibrant plant with multi-colored leaves.",
+      "sunlight": "high",
+      "watering": "moderate",
+      "toxicity": "moderate",
+      "difficulty": "moderate"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 20,
+    "fields": {
+      "name": "fiddle leaf fig",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670592/fiddleleaffig_kldajl.jpg",
+      "scientific_name": "ficus lyrata",
+      "description": "A trendy plant with large, violin-shaped leaves.",
+      "sunlight": "high",
+      "watering": "moderate",
+      "toxicity": "moderate",
+      "difficulty": "high"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 21,
+    "fields": {
+      "name": "prayer plant",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670596/prayerplant_kwkdwk.jpg",
+      "scientific_name": "maranta leuconeura",
+      "description": "A plant with patterned leaves that move upward at night.",
+      "sunlight": "low",
+      "watering": "moderate",
+      "toxicity": "none",
+      "difficulty": "moderate"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 22,
+    "fields": {
+      "name": "dumb cane",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670588/dumbcane_e0ntxx.jpg",
+      "scientific_name": "dieffenbachia seguine",
+      "description": "An easy-care plant with patterned, green-and-white leaves.",
+      "sunlight": "moderate",
+      "watering": "moderate",
+      "toxicity": "high",
+      "difficulty": "low"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 23,
+    "fields": {
+      "name": "chinese evergreen",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670587/chineseevergreen_srb8ut.jpg",
+      "scientific_name": "aglaonema",
+      "description": "A hardy plant with colorful, patterned foliage.",
+      "sunlight": "low",
+      "watering": "low",
+      "toxicity": "moderate",
+      "difficulty": "low"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 24,
+    "fields": {
+      "name": "kentia palm",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670594/kentiapalm_f8hxun.jpg",
+      "scientific_name": "howea forsteriana",
+      "description": "An elegant palm with arching fronds.",
+      "sunlight": "low",
+      "watering": "moderate",
+      "toxicity": "none",
+      "difficulty": "moderate"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 25,
+    "fields": {
+      "name": "cast iron plant",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670586/castiron_zybaet.jpg",
+      "scientific_name": "aspidistra elatior",
+      "description": "A durable, low-maintenance plant with dark green leaves.",
+      "sunlight": "low",
+      "watering": "low",
+      "toxicity": "none",
+      "difficulty": "low"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 26,
+    "fields": {
+      "name": "corn plant",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670588/cornplant_hoaxmq.jpg",
+      "scientific_name": "dracaena fragrans",
+      "description": "A tall plant with variegated leaves that resemble corn stalks.",
+      "sunlight": "moderate",
+      "watering": "moderate",
+      "toxicity": "moderate",
+      "difficulty": "moderate"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 27,
+    "fields": {
+      "name": "norfolk island pine",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670592/norfolkislandpine_qouyyk.jpg",
+      "scientific_name": "araucaria heterophylla",
+      "description": "A miniature tree perfect for indoor decoration.",
+      "sunlight": "high",
+      "watering": "moderate",
+      "toxicity": "low",
+      "difficulty": "moderate"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 28,
+    "fields": {
+      "name": "lucky bamboo",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670591/luckybamboo_rgxrdl.jpg",
+      "scientific_name": "dracaena sanderiana",
+      "description": "A symbol of good luck with straight or twisted stalks.",
+      "sunlight": "low",
+      "watering": "moderate",
+      "toxicity": "moderate",
+      "difficulty": "low"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 29,
+    "fields": {
+      "name": "boston fern",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670586/bostonfern_fhy42j.jpg",
+      "scientific_name": "nephrolepis exaltata",
+      "description": "A classic indoor fern with lush, arching fronds.",
+      "sunlight": "low",
+      "watering": "high",
+      "toxicity": "none",
+      "difficulty": "moderate"
+    }
+  },
+  {
+    "model": "plants.plant",
+    "pk": 30,
+    "fields": {
+      "name": "pepperomia",
+      "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670594/peperomia_bikcbz.jpg",
+      "scientific_name": "peperomia obtusifolia",
+      "description": "A compact plant with thick, glossy leaves available in various patterns.",
+      "sunlight": "low",
+      "watering": "low",
+      "toxicity": "none",
+      "difficulty": "low"
+    }
+  }
+]
