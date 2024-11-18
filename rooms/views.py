@@ -4,21 +4,25 @@ from rest_framework.response import Response
 from utilities.exceptions import catch_exceptions
 from .serializers import RoomSerializer, PopulatedRoomSerializer
 from utilities.permissions import IsOwnerOrReadOnly
+from rest_framework.permissions import IsAuthenticated
 
 from .models import Room
 
 # Create your views here.
 class ListCreateRoomView(APIView):
+    permission_classes = [IsAuthenticated]
 
     @catch_exceptions
     def get(self, request):
-        rooms = Room.objects.all()
-        serializer = RoomSerializer(rooms, many=True)
+        rooms = Room.objects.filter(owner=request.user)
+        print(request.user)
+        serializer = PopulatedRoomSerializer(rooms, many=True)
         return Response(serializer.data)
     
     @catch_exceptions
     def post(self, request):
         request.data['owner'] = request.user.id
+        print(request.data)
         room = RoomSerializer(data=request.data)
         room.is_valid(raise_exception=True)
         room.save()
