@@ -1,5 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 from users.serializers import UserSerializer
+from plants.serializers import PlantSerializer
 from .models import Room
 
 class RoomSerializer(ModelSerializer):
@@ -9,3 +10,4 @@ class RoomSerializer(ModelSerializer):
 
 class PopulatedRoomSerializer(RoomSerializer):
     owner = UserSerializer()
+    plants = PlantSerializer(many=True)

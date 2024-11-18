@@ -6,5 +6,11 @@ class Room(models.Model):
     direction_facing = models.CharField(max_length=5)
     owner = models.ForeignKey('users.User', related_name='owned_rooms', on_delete=models.CASCADE)
 
+    plants = models.ManyToManyField(
+        to='plants.Plant',
+        related_name='rooms',
+        blank=True
+    )
+
     def __str__(self):
         return self.name
