@@ -35,6 +35,7 @@ class SignInView(APIView):
             token_pair = RefreshToken.for_user(user)
             access_token = token_pair.access_token
             serialized_user = UserSerializer(user)
+            access_token['user'] = serialized_user.data
             return Response({ 
                 'user': serialized_user.data,
                 'token': str(access_token)

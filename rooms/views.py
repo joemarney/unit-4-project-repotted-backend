@@ -15,14 +15,12 @@ class ListCreateRoomView(APIView):
     @catch_exceptions
     def get(self, request):
         rooms = Room.objects.filter(owner=request.user)
-        print(request.user)
         serializer = PopulatedRoomSerializer(rooms, many=True)
         return Response(serializer.data)
     
     @catch_exceptions
     def post(self, request):
         request.data['owner'] = request.user.id
-        print(request.data)
         room = RoomSerializer(data=request.data)
         room.is_valid(raise_exception=True)
         room.save()
