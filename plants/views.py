@@ -1,7 +1,7 @@
-from rest_framework.generics import ListAPIView, RetrieveAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView, ListCreateAPIView, DestroyAPIView
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
-from .serializers import PlantSerializer
-from .models import Plant
+from .serializers import PlantSerializer, WishlistSerializer
+from .models import Plant, Wishlist
 
 # Create your views here.
 class PlantListView(ListAPIView):
@@ -13,3 +13,19 @@ class PlantDetailView(RetrieveAPIView):
     permission_classes = [IsAuthenticated]
     queryset = Plant.objects.all()
     serializer_class = PlantSerializer
+
+class WishlistListCreateView(ListCreateAPIView):
+    permission_classes = [IsAuthenticatedOrReadOnly]
+    serializer_class = WishlistSerializer
+
+    def get_queryset(self):
+        return Wishlist.objects.filter(user=self.request.user)
+    
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+class WishlistDestroyView(DestroyAPIView):
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return Wishlist.objects.filter(user=self.request.user)
