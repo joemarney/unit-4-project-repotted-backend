@@ -30,10 +30,10 @@ SECRET_KEY = getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False if getenv('ENVIRONMENT') == 'production' else True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'repotted-de0795143825.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1', 'repotted-de0795143825.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://repotted-de0795143825.herokuapp.com/'
+    'https://repotted-de0795143825.herokuapp.com'
 ]
 
 # Application definition
