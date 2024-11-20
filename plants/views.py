@@ -1,6 +1,6 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView, ListCreateAPIView, DestroyAPIView
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
-from .serializers import PlantSerializer, WishlistSerializer
+from .serializers import PlantSerializer, PopulatedWishlistSerializer
 from .models import Plant, Wishlist
 
 # Create your views here.
@@ -16,7 +16,7 @@ class PlantDetailView(RetrieveAPIView):
 
 class WishlistListCreateView(ListCreateAPIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
-    serializer_class = WishlistSerializer
+    serializer_class = PopulatedWishlistSerializer
 
     def get_queryset(self):
         return Wishlist.objects.filter(user=self.request.user)
