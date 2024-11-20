@@ -19,7 +19,7 @@ class WishlistListCreateView(ListCreateAPIView):
     serializer_class = WishlistSerializer
 
     def get_queryset(self):
-        return Wishlist.objects.filter(user=self.request.user).select_related('plant')
+        return Wishlist.objects.filter(user=self.request.user)
     
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
