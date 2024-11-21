@@ -10,6 +10,13 @@ from django.contrib.auth import get_user_model, hashers
 
 User = get_user_model()
 
+def get_token(user):
+    token_pair = RefreshToken.for_user(user)
+    access_token = token_pair.access_token
+    serialized_user = UserSerializer(user)
+    access_token['user'] = serialized_user.data
+    return str(access_token)
+
 # Create your views here.
 class SignUpView(APIView):
 
@@ -17,10 +24,12 @@ class SignUpView(APIView):
     def post(self, request):
         user = UserSerializer(data=request.data)
         user.is_valid(raise_exception=True)
-        user.save()
+        new_user = user.save()
+        token = get_token(new_user)
         return Response({ 
             'message': 'Registration Successful', 
-            'user': user.data 
+            # 'user': user.data 
+            'token': token
         })
 
 class SignInView(APIView):
@@ -32,13 +41,14 @@ class SignInView(APIView):
         user = User.objects.get(Q(username=u_or_e) | Q(email=u_or_e))
 
         if hashers.check_password(password, user.password):
-            token_pair = RefreshToken.for_user(user)
-            access_token = token_pair.access_token
-            serialized_user = UserSerializer(user)
-            access_token['user'] = serialized_user.data
+            # token_pair = RefreshToken.for_user(user)
+            # access_token = token_pair.access_token
+            # serialized_user = UserSerializer(user)
+            # access_token['user'] = serialized_user.data
+            token = get_token(user)
             return Response({ 
-                'user': serialized_user.data,
-                'token': str(access_token)
+                # 'user': serialized_user.data,
+                'token': token
             })
     
         return Response({ 'detail': 'Unauthorized' }, status.HTTP_401_UNAUTHORIZED)
