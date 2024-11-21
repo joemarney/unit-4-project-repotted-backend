@@ -199,9 +199,9 @@
     "model": "plants.plant",
     "pk": 15,
     "fields": {
-      "name": "string of pearls",
+      "name": "String of Pearls",
       "image": "https://res.cloudinary.com/dwdvdwwzv/image/upload/v1731670596/stringofpearls_rvjtip.jpg",
-      "scientific_name": "senecio rowleyanus",
+      "scientific_name": "Senecio Rowleyanus",
       "description": "In the Asteraceae (Daisy) family, it is a striking succulent native to Southwest Africa. It requires bright indirect sunlight and infrequent watering, about once every 2-3 weeks. Mildly toxic to pets and humans, it can cause gastrointestinal upset if consumed.",
       "sunlight": "moderate",
       "watering": "low",

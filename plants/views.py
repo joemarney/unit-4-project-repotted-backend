@@ -15,17 +15,19 @@ class PlantDetailView(RetrieveAPIView):
     serializer_class = PlantSerializer
 
 class WishlistListCreateView(ListCreateAPIView):
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticated]
     serializer_class = WishlistSerializer
 
     def get_queryset(self):
-        return Wishlist.objects.filter(user=self.request.user)
+        queryset = Wishlist.objects.filter(user=self.request.user).select_related('plant')
+        return queryset
     
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
 class WishlistDestroyView(DestroyAPIView):
     permission_classes = [IsAuthenticated]
+    serializer_class = WishlistSerializer
 
     def get_queryset(self):
         return Wishlist.objects.filter(user=self.request.user)
